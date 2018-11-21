@@ -1,0 +1,16 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mycompany</groupId>
+  <artifactId>InterceptorArtemis</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>InterceptorArtemis</name>
+  <description>InterceptorArtemis</description>
+  <packaging>jar</packaging>
+     <dependencies>
+      <dependency>
+         <groupId>org.apache.activemq</groupId>
+         <artifactId>artemis-jms-client-all</artifactId>
+         <version>2.6.1.amq-720004-redhat-1</version>
+      </dependency>
+   </dependencies>
+</project>
