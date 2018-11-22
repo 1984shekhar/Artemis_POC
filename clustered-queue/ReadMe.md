@@ -1,6 +1,7 @@
 
 
-#might have to stop iptables service so that bridge connection can be created between brokers.
+#might have to stop iptables service so that bridge connection can be created between brokers. 
+#Once cluster is configured successfully we can test with producer on one of the broker and check that messages are sent in round robin sequence to each broker.
 
 service iptables stop 
 
