@@ -1,3 +1,7 @@
+# might have to stop iptables service to allow bridge connection between brokers.
+
+service iptables stop
+
 ./artemis producer --url tcp://0.0.0.0:61621 --message-count 4 --destination exampleQueue
 
 ./artemis queue stat --url tcp://0.0.0.0:61622 --queueName exampleQueue
