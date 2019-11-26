@@ -1,10 +1,10 @@
 
 Using bucket grouping:
-
+```
 <address-setting match="#">
 <default-group-rebalance>true</default-group-rebalance>
 <default-group-buckets>3</default-group-buckets>
-
+```
 
 
 Note: With above configurations there is no need to execute resetAllGroups operation. Re-balancing of groups will happen automatically as soon number of consumer increase or decrease.
