@@ -1,0 +1,18 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.mycompany</groupId>
+  <artifactId>eap-sender-receiver</artifactId>
+  <version>1.0</version>
+  <name>eap-sender-receiver</name>
+  <description>eap-sender-receiver</description>
+  
+  <dependencies>
+  <dependency>
+            <groupId>org.wildfly</groupId>
+            <artifactId>wildfly-jms-client-bom</artifactId>
+            <version>17.0.1.Final</version>            
+            <type>pom</type>
+        </dependency>
+
+  </dependencies>
+</project>
