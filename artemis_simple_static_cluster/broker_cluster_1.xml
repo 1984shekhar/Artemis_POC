@@ -1,0 +1,10 @@
+<cluster-connections xmlns="urn:activemq:core">
+    <cluster-connection name="felix">
+        <address>csp</address>
+        <connector-ref>local-connector</connector-ref>
+        <message-load-balancing>STRICT</message-load-balancing> 
+        <static-connectors>
+            <connector-ref>remote-connector</connector-ref>
+        </static-connectors>
+    </cluster-connection>
+</cluster-connections>

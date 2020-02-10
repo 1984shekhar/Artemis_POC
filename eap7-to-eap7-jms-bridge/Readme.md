@@ -10,3 +10,5 @@ Check Messages:
 
 [standalone@localhost:9990 /] /subsystem=messaging-activemq/server=default/jms-queue=InQueue:list-messages
 
+SendMessage:
+https://github.com/1984shekhar/Artemis_POC/blob/master/eap-sender-receiver/src/main/java/com/mypackage/QueueSendEAP.java
