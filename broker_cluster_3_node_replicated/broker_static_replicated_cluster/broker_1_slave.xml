@@ -230,7 +230,11 @@ under the License.
                <queue name="ExpiryQueue" />
             </anycast>
          </address>
-
+<address name="exampleQueue">
+            <anycast>
+               <queue name="exampleQueue"/>
+            </anycast>
+         </address>
       </addresses>
 
 
