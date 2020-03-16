@@ -12,9 +12,9 @@ public class QueueReceiveEAP implements MessageListener {
 	// *************** Connection Factory JNDI name *************************
 	public final static String JMS_FACTORY = "jms/RemoteConnectionFactory";
 	// *************** Queue JNDI name *************************
-	public final static String QUEUE = "jms/TestQueue";
+	public final static String QUEUE = "jms/queue/clusterQ";
 	
-	public final static String URL="remote://localhost:4447";
+	public final static String URL="http-remoting://localhost:8080";
 	
 	private QueueConnectionFactory  qconFactory;
 	private QueueConnection qcon;
@@ -22,8 +22,8 @@ public class QueueReceiveEAP implements MessageListener {
 	private QueueReceiver qreceiver;
 	private Queue queue;
 	private boolean quit = false;
-	private String userName="jms";
-	private String password="jms@1234";
+	private String userName="admin";
+	private String password="admin";
 	
 
 	public void onMessage(Message msg) {

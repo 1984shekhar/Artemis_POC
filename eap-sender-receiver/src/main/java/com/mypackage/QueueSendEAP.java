@@ -19,7 +19,7 @@ public class QueueSendEAP {
 	// *************** Connection Factory JNDI name *************************
 	public final static String JMS_FACTORY = "jms/RemoteConnectionFactory";
 	// *************** Queue JNDI name *************************
-	public final static String QUEUE = "jms/queue/InQueue";
+	public final static String QUEUE = "jms/queue/clusterQ";
 	
 	public final static String URL="http-remoting://localhost:8080";
 
