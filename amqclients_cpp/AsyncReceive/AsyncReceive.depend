@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1584814683 source:/home/chandrashekhar/Development/CPP_APPS/cpp/AsyncSendAndReceive/simpleReceive.cpp
+	"options.hpp"
+	<proton/connection.hpp>
+	<proton/connection_options.hpp>
+	<proton/container.hpp>
+	<proton/delivery.hpp>
+	<proton/link.hpp>
+	<proton/message.hpp>
+	<proton/message_id.hpp>
+	<proton/messaging_handler.hpp>
+	<proton/value.hpp>
+	<iostream>
+	<map>
+	"fake_cpp11.hpp"
+
+1584815976 /home/chandrashekhar/Development/CPP_APPS/cpp/AsyncSendAndReceive/options.hpp
+	<string>
+	<sstream>
+	<ostream>
+	<vector>
+	<stdexcept>
+
+1578669764 /home/chandrashekhar/Development/CPP_APPS/cpp/AsyncSendAndReceive/fake_cpp11.hpp
+
+1584816142 source:/home/chandrashekhar/Development/CPP_APPS/cpp/AsyncSendAndReceive/simpleSend.cpp
+	"options.hpp"
+	<proton/connection.hpp>
+	<proton/connection_options.hpp>
+	<proton/container.hpp>
+	<proton/message.hpp>
+	<proton/message_id.hpp>
+	<proton/messaging_handler.hpp>
+	<proton/tracker.hpp>
+	<proton/types.hpp>
+	<iostream>
+	<map>
+	"fake_cpp11.hpp"
+
+1584817323 source:/home/chandrashekhar/Development/CPP_APPS/cpp/AsyncReceive/simpleReceive.cpp
+	"options.hpp"
+	<proton/connection.hpp>
+	<proton/connection_options.hpp>
+	<proton/container.hpp>
+	<proton/delivery.hpp>
+	<proton/link.hpp>
+	<proton/message.hpp>
+	<proton/message_id.hpp>
+	<proton/messaging_handler.hpp>
+	<proton/value.hpp>
+	<iostream>
+	<map>
+	"fake_cpp11.hpp"
+
+1584815976 /home/chandrashekhar/Development/CPP_APPS/cpp/AsyncReceive/options.hpp
+	<string>
+	<sstream>
+	<ostream>
+	<vector>
+	<stdexcept>
+
+1578669764 /home/chandrashekhar/Development/CPP_APPS/cpp/AsyncReceive/fake_cpp11.hpp
+

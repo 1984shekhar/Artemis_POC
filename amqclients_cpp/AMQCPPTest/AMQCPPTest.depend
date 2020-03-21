@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1578669764 source:/home/chandrashekhar/Development/CPP_APPS/cpp/AMQCPPTest/hello.cpp
+	<proton/connection.hpp>
+	<proton/container.hpp>
+	<proton/delivery.hpp>
+	<proton/message.hpp>
+	<proton/messaging_handler.hpp>
+	<proton/tracker.hpp>
+	<iostream>
+	"fake_cpp11.hpp"
+
+1578669764 /home/chandrashekhar/Development/CPP_APPS/cpp/AMQCPPTest/fake_cpp11.hpp
+
