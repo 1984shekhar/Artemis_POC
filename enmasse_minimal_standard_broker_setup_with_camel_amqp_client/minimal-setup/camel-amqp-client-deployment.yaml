@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: camel-amqp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: camel-amqp
+  template:
+    metadata:
+      labels:
+        app: camel-amqp
+    spec:
+      containers:
+      - name: camel-amqp-client
+        image: camel-amqp-client
+        imagePullPolicy: Never
+        resources:
+            requests:
+              cpu: "0.2"
+              memory: 256Mi
+            limits:
+              cpu: "1.0"
+              memory: 256Mi

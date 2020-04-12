@@ -1,0 +1,8 @@
+apiVersion: enmasse.io/v1beta1
+kind: Address
+metadata:
+    name: myspace.myqueue-2
+spec:
+    address: myqueue-2
+    type: queue
+    plan: standard-small-queue

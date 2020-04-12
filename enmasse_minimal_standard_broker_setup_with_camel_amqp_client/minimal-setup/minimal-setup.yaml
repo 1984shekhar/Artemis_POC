@@ -1,0 +1,36 @@
+apiVersion: admin.enmasse.io/v1beta1
+kind: StandardInfraConfig
+metadata:
+  name: default
+spec: {}
+---
+apiVersion: admin.enmasse.io/v1beta2
+kind: AddressPlan
+metadata:
+  name: standard-small-queue
+spec:
+  addressType: queue
+  resources:
+    router: 0.01
+    broker: 0.1
+---
+apiVersion: admin.enmasse.io/v1beta2
+kind: AddressSpacePlan
+metadata:
+  name: standard-small
+spec:
+  addressSpaceType: standard
+  infraConfigRef: default
+  addressPlans:
+  - standard-small-queue
+  resourceLimits:
+    router: 2.0
+    broker: 3.0
+    aggregate: 4.0
+---
+apiVersion: admin.enmasse.io/v1beta1
+kind: AuthenticationService
+metadata:
+  name: none-authservice
+spec:
+  type: none
