@@ -1,0 +1,73 @@
+[root@qdrouterd-8f90483-0 bin]# qdstat -b 127.0.0.1:7777 -c
+2020-04-19 17:30:30.422514 UTC
+qdrouterd-8f90483-0
+
+Connections
+  id   host                 container                             role             dir  security                              authentication                         tenant  last dlv      uptime
+  =======================================================================================================================================================================================================
+  1    ragent-8f90483:5671  b33d6b1c-88de-a247-b682-e2a6734234cf  normal           out  TLSv1.2(ECDHE-RSA-AES128-GCM-SHA256)  x.509                                          -             000:01:08:06
+  2    172.17.0.9:53744     broker-global-dlq-out                 route-container  in   TLSv1.2(ECDHE-RSA-AES128-GCM-SHA256)  CN=broker.8f90483,O=io.enmasse(x.509)          -             000:01:07:03
+  4    172.17.0.9:53748     broker-8f90483-mmsa-0-in              route-container  in   TLSv1.2(ECDHE-RSA-AES128-GCM-SHA256)  CN=broker.8f90483,O=io.enmasse(x.509)          000:00:00:56  000:01:07:03
+  3    172.17.0.9:53746     broker-8f90483-mmsa-0-out             route-container  in   TLSv1.2(ECDHE-RSA-AES128-GCM-SHA256)  CN=broker.8f90483,O=io.enmasse(x.509)          000:00:00:56  000:01:07:03
+  8    172.17.0.6:54090     admin.8f90483-679bdcd75f-kkmfv        normal           in   TLSv1.2(ECDHE-RSA-AES128-GCM-SHA256)  CN=admin.8f90483,O=io.enmasse(x.509)           000:00:00:07  000:01:06:23
+  378  127.0.0.1:39524      eac52c0f-c844-4dfe-9631-b30923ff65d6  normal           in   no-security                           no-auth                                        000:00:00:00  000:00:00:00
+[root@qdrouterd-8f90483-0 bin]# 
+
+
+[root@qdrouterd-8f90483-0 bin]# qdstat -b 127.0.0.1:7777 -a
+2020-04-19 17:32:33.238132 UTC
+qdrouterd-8f90483-0
+
+Router Addresses
+  class     addr                     phs  distrib       pri  local  remote  in     out    thru  fallback
+  ========================================================================================================
+  mobile    !!GLOBAL_DLQ             1    balanced      -    0      0       0      0      0     0
+  local     $_management_internal         closest       -    0      0       0      0      0     0
+  link-in   $lwt                          linkBalanced  -    0      0       0      0      0     0
+  link-out  $lwt                          linkBalanced  -    0      0       0      0      0     0
+  mobile    $management              0    closest       -    0      0       1,715  0      0     0
+  local     $management                   closest       -    0      0       2,075  0      0     0
+  mobile    _$qd.addr_lookup         0    balanced      -    0      0       0      0      0     0
+  mobile    _$qd.edge_addr_tracking  0    balanced      -    0      0       0      0      0     0
+  mobile    myqueue                  1    balanced      -    0      0       373    373    0     0
+  mobile    myqueue                  0    balanced      -    1      0       370    370    0     0
+  local     qdhello                       flood         -    0      0       0      0      0     0
+  local     qdrouter                      flood         -    0      0       0      0      0     0
+  topo      qdrouter                      flood         -    0      0       0      0      0     0
+  local     qdrouter.ma                   multicast     -    0      0       0      0      0     0
+  topo      qdrouter.ma                   multicast     -    0      0       0      0      0     0
+  local     temp.B8CMEeWxi3qoLxv          balanced      -    1      0       0      1      0     0
+  local     temp.hrOHMpPRkFHtqPb          balanced      -    1      0       0      15     0     0
+  local     temp.sVO+gENuSuIak2b          balanced      -    1      0       0      2,490  0     0
+[root@qdrouterd-8f90483-0 bin]# 
+
+[root@qdrouterd-8f90483-0 bin]# qdstat -b 127.0.0.1:7777 -l
+2020-04-19 17:33:15.600567 UTC
+qdrouterd-8f90483-0
+
+Router Links
+  type      dir  conn id  id   peer  class   addr                  phs  cap  pri  undel  unsett  deliv  presett  psdrop  acc   rej  rel  mod  delay  rate  stuck  cred  blkd
+  ================================================================================================================================================================================
+  endpoint  in   1        8                                             250  0    0      0       15     0        0       15    0    0    0    0      0     0      250   -
+  endpoint  out  1        9          local   temp.hrOHMpPRkFHtqPb       250  0    0      0       15     15       0       0     0    0    0    0      0     0      985   -
+  endpoint  in   2        13         mobile  !!GLOBAL_DLQ          1    250  0    0      0       0      0        0       0     0    0    0    0      0     0      0     01:09:48
+  endpoint  in   4        14         mobile  myqueue               1    250  0    0      0       373    0        0       373   0    0    0    0      0     0      250   -
+  endpoint  out  3        15         mobile  myqueue               0    250  0    0      0       370    0        0       370   0    0    0    0      0     0      630   -
+  endpoint  in   8        22                                            250  0    0      0       2520   0        0       2520  0    0    0    0      1     0      250   -
+  endpoint  out  8        23         local   temp.sVO+gENuSuIak2b       250  0    0      0       2520   2520     0       0     0    0    0    0      1     0      980   -
+  endpoint  in   397      798        mobile  $management           0    250  0    0      0       2      0        0       2     0    0    0    0      0     0      250   -
+  endpoint  out  397      799        local   temp.llHP0EsuzLlMqki       250  0    0      0       1      1        0       0     0    0    0    0      0     0      1     -
+[root@qdrouterd-8f90483-0 bin]# 
+
+
+[root@qdrouterd-8f90483-0 bin]# qdstat -b 127.0.0.1:7777 --linkroutes
+2020-04-19 17:33:52.012654 UTC
+qdrouterd-8f90483-0
+
+Link Routes
+  address  dir  distrib       status
+  ======================================
+  $lwt     in   linkBalanced  inactive
+  $lwt     out  linkBalanced  inactive
+[root@qdrouterd-8f90483-0 bin]# 
+
