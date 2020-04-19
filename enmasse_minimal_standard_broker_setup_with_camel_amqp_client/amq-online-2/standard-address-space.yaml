@@ -1,0 +1,7 @@
+apiVersion: enmasse.io/v1beta1
+kind: AddressSpace
+metadata:
+  name: my-address-space
+spec:
+  type: standard
+  plan: standard-small
