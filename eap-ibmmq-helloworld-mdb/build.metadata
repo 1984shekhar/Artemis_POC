@@ -1,0 +1,12 @@
+# Created by buildmetadata-maven-plugin 1.7.0 ( SHA: 6f444cae ) 
+build.artifactId=helloworld-mdb
+build.groupId=org.jboss.eap.quickstarts
+build.java.compiler=HotSpot 64-Bit Tiered Compilers
+build.java.runtime.name=OpenJDK Runtime Environment
+build.java.runtime.version=1.8.0_242-b08
+build.java.vendor=Oracle Corporation
+build.java.vm=OpenJDK 64-Bit Server VM
+build.maven.execution.cmdline=-B -Dmaven.test.skip\=true -DskipTests clean package -Dcheckstyle.skip
+build.maven.version=3.6.3
+build.version=7.3.0.GA
+build.version.full=7.3.0.GA
