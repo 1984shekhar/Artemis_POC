@@ -1,6 +1,6 @@
 
 
-
+```
 [chandrashekhar@localhost bin]$ ./artemis queue stat --user admin --password admin
 |NAME                     |ADDRESS                  |CONSUMER_COUNT |MESSAGE_COUNT |MESSAGES_ADDED |DELIVERING_COUNT |MESSAGES_ACKED |SCHEDULED_COUNT |ROUTING_TYPE |
 |DLQ                      |DLQ                      |0              |0             |0              |0                |0              |0               |ANYCAST      |
@@ -18,3 +18,4 @@ Producer ActiveMQQueue[MyQueue], thread=0 Elapsed time in second : 0 s
 Producer ActiveMQQueue[MyQueue], thread=0 Elapsed time in milli second : 283 milli seconds
 [chandrashekhar@localhost bin]$ 
 
+```
