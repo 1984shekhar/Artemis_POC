@@ -136,7 +136,7 @@ data:
         action: keep
       # don't attempt to scrape all ports that are exposed by the pod. Just scape 
       # the port defined in the attribute prometheus.io.port (which will be '8080')
-      - source_labels: [__meta_kubernetes_pod_label_address, __meta_kubernetes_pod_annotation_prometheus_io_port]
+      - source_labels: [__meta_kubernetes_pod_annotation_address, __meta_kubernetes_pod_annotation_prometheus_io_port]
         action: replace
         regex: ([^:]+)(?::\d+)?;(\d+)
         replacement: $1:$2
