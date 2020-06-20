@@ -4,7 +4,7 @@
 - For the pod to be properly targeted by Prometheus I had to set the following annotations and label:
    - oc annotate pod ex-aao-ss-0 prometheus.io/scrape=true
    - oc annotate pod ex-aao-ss-0 prometheus.io/port=80
-   - oc label pod ex-aao-ss-0 address=ex-aao-wconsj-0-svc-rte-amq76.apps-crc.testing
+   - oc annotate pod ex-aao-ss-0 address=ex-aao-wconsj-0-svc-rte-amq76.apps-crc.testing
 - I borrowed the prometheus.yaml from AMQ Interconnect and made a slight modification for the address (attached)
     - oc apply -f prometheus.yaml
     - oc expose service/prometheus
