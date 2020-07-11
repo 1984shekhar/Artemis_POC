@@ -1,6 +1,6 @@
 - Test ldap connection with ldapsearch utility.
 ```
-[chandrashekhar@localhost security-ldap]$ ldapsearch -H ldap://localhost:10389 -x -D "uid=bill,dc=activemq,dc=org" -w activemq|less
+[chandrashekhar@localhost security-ldap]$ ldapsearch -H ldap://localhost:10390 -x -D "uid=bill,dc=activemq,dc=org" -w activemq|less
 ```
 - Producer and Consumer
 ```
