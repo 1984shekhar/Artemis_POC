@@ -20,6 +20,7 @@ drwxrwxr-x. 5 cpandey       cpandey          58 Oct 18 18:28 activemq
 ```
 
 # Start two EAP nodes in same nodes with remote nfs server.
+```
 [cpandey@cpandey bin]$ ./standalone.sh -c standalone-full-ha.xml
 [cpandey@cpandey bin]$ ./standalone.sh -c standalone-full-ha.xml -Djboss.socket.binding.port-offset=100
-
+```
