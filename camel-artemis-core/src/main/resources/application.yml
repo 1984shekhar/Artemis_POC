@@ -1,0 +1,25 @@
+mycompany:
+  broker:
+    producer-url: tcp://localhost:61616?jms.prefetchPolicy.all=1
+    producer-out-queue: TEST.OUT
+    consumer-url: tcp://localhost:61616?jms.prefetchPolicy.all=1
+    consumer-in-queue: TEST.OUT
+    concurrent-consumers: 5
+    async-consumer: true
+    inbox: src/test/resources/inbox
+    outbox: src/test/resources/outbox
+  message:
+    size: 20000000
+
+logging:
+  level:
+    root: INFO
+    com.eurofins.eesb.amqp: INFO
+    org.apache.qpid: WARN
+  pattern:
+    file: "%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{25} - %msg%n"
+    console: "%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{25} - %msg%n"
+  path: ./logs
+  file:
+    max-size: 1024KB
+    max-history: 10
