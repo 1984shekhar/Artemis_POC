@@ -36,7 +36,7 @@ public class RequestReplyExample {
         String requestQueueName = "REQ.3M3S";
         String responseQueueName = "RES.3M3S";
    	
-        String detokenReq = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><ns2:DecodeTokenRq xmlns:ns2=\"http://api.dbs.com/capi/xsd/tokenization/v1_0\"><ns2:PartyToken>17520907939856225154001</ns2:PartyToken></ns2:DecodeTokenRq>";
+        String detokenReq = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><ns2:DecodeTokenRq xmlns:ns2=\"http://my.company.com/api/xsd/tokenization/v1_0\"><ns2:PartyToken>56225154001</ns2:PartyToken></ns2:DecodeTokenRq>";
 
         try {
 
