@@ -56,7 +56,6 @@ public class TopicReceiveEAP implements MessageListener {
 		qconFactory = (TopicConnectionFactory ) ctx.lookup(JMS_FACTORY);
 		//qconFactory.getRedeliveryPolicy().setMaximumRedeliveries(2);
 		qcon = qconFactory.createTopicConnection(userName, password);
-		//qcon.setClientID("Hello Shailendra");
 		qsession = qcon.createTopicSession(true, Session.AUTO_ACKNOWLEDGE);
 
 		topic = (Topic) ctx.lookup(TopicName);
@@ -72,8 +71,8 @@ public class TopicReceiveEAP implements MessageListener {
 	}
 
 	public static void main(String[] args) throws Exception {
-		String url = args[0]!=null ? args[0]:URL;
-		String topic = args[1]!=null ?args[1]:Topic;
+		String url = args.length == 2 ? args[0]:URL;
+		String topic = args.length == 2 ?args[1]:Topic;
 		InitialContext ic= getInitialContext(url);
 		
 		

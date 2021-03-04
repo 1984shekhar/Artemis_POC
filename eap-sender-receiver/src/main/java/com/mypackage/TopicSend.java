@@ -63,9 +63,9 @@ public class TopicSend {
 	}
 
 	public static void main(String[] args) throws Exception {
-		String url = args[0]!=null ? args[0]:URL;
-		String topic = args[1]!=null ?args[1]:Topic;
-		InitialContext ic = getInitialContext(URL);
+		String url = args.length == 2 ? args[0]:URL;
+		String topic = args.length == 2 ?args[1]:Topic;
+		InitialContext ic = getInitialContext(url);
 		TopicSend qs = new TopicSend();
 		qs.init(ic, topic);
 		readAndSend(qs);

@@ -34,9 +34,9 @@ $ mvn exec:java -Dexec.mainClass="com.mypackage.TopicSend" -Dexec.args="http-rem
 ```
 For Queue can be run as:
 ```
-$ mvn exec:java -Dexec.mainClass="com.mypackage.QueueReceiveEAP" -Dexec.args="http-remoting://localhost:8080 jms/topic/INDLQ"
+$ mvn exec:java -Dexec.mainClass="com.mypackage.QueueReceiveEAP" -Dexec.args="http-remoting://localhost:8080 jms/queue/INDLQ"
 
-$ mvn exec:java -Dexec.mainClass="com.mypackage.QueueSendEAP" -Dexec.args="http-remoting://localhost:8080 jms/topic/INDLQ"
+$ mvn exec:java -Dexec.mainClass="com.mypackage.QueueSendEAP" -Dexec.args="http-remoting://localhost:8080 jms/queue/INDLQ"
 
 ```
 

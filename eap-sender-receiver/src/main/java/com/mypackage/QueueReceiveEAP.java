@@ -72,8 +72,8 @@ public class QueueReceiveEAP implements MessageListener {
 	}
 
 	public static void main(String[] args) throws Exception {
-		String url = args[0]!=null ? args[0]:URL;
-		String queueDest = args[1]!=null ?args[1]:QUEUE;
+		String url = args.length == 2 ? args[0]:URL;
+		String queueDest = args.length == 2 ?args[1]:QUEUE;
 		InitialContext ic = getInitialContext(url);
 		QueueReceiveEAP qr = new QueueReceiveEAP();
 		qr.init(ic, queueDest);
