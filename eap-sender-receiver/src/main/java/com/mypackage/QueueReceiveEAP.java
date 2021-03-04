@@ -72,10 +72,11 @@ public class QueueReceiveEAP implements MessageListener {
 	}
 
 	public static void main(String[] args) throws Exception {
-		
-		InitialContext ic = getInitialContext(URL);
+		String url = args[0]!=null ? args[0]:URL;
+		String queueDest = args[1]!=null ?args[1]:QUEUE;
+		InitialContext ic = getInitialContext(url);
 		QueueReceiveEAP qr = new QueueReceiveEAP();
-		qr.init(ic, QUEUE);
+		qr.init(ic, queueDest);
 		System.out
 				.println("JMS Ready To Receive Messages (To quit, send a  message from QueueSender.class).");
 		// Wait until a "quit" message has been received.

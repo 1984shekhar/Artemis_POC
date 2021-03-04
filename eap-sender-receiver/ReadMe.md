@@ -25,9 +25,18 @@ Check Messages:
 }
 ```
 
-Standalone can be run as:
+For Topic can be run as:
 ```
-$ mvn exec:java -Dexec.mainClass="com.mypackage.QueueSendEAP"
-```
+$ mvn exec:java -Dexec.mainClass="com.mypackage.TopicReceiveEAP" -Dexec.args="http-remoting://localhost:8080 jms/topic/INTopic"
 
+$ mvn exec:java -Dexec.mainClass="com.mypackage.TopicSend" -Dexec.args="http-remoting://localhost:8080 jms/topic/INTopic"
+
+```
+For Queue can be run as:
+```
+$ mvn exec:java -Dexec.mainClass="com.mypackage.QueueReceiveEAP" -Dexec.args="http-remoting://localhost:8080 jms/topic/INDLQ"
+
+$ mvn exec:java -Dexec.mainClass="com.mypackage.QueueSendEAP" -Dexec.args="http-remoting://localhost:8080 jms/topic/INDLQ"
+
+```
 

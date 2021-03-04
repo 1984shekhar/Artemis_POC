@@ -19,7 +19,7 @@ public class QueueSendEAP {
 	// *************** Connection Factory JNDI name *************************
 	public final static String JMS_FACTORY = "jms/RemoteConnectionFactory";
 	// *************** Queue JNDI name *************************
-	public final static String QUEUE = "jms/queue/InQueue";
+	public final static String QUEUE = "jms/queue/INDLQ";
 	
 	public final static String URL="http-remoting://localhost:8080";
 
@@ -60,9 +60,11 @@ public class QueueSendEAP {
 	}
 
 	public static void main(String[] args) throws Exception {
-		InitialContext ic = getInitialContext(URL);
+		String url = args[0]!=null ? args[0]:URL;
+		String queueDest = args[1]!=null ?args[1]:QUEUE;
+		InitialContext ic = getInitialContext(url);
 		QueueSendEAP qs = new QueueSendEAP();
-		qs.init(ic, QUEUE);
+		qs.init(ic, queueDest);
 		readAndSend(qs);
 		qs.close();
 	}
