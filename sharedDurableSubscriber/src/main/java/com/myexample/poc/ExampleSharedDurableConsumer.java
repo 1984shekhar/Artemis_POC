@@ -19,7 +19,6 @@ public class ExampleSharedDurableConsumer {
 	         try {
 	         //Topic topic = ActiveMQJMSClient.createTopic("Test.Topic");
 
-	         // Step 2. Instantiate connection towards server EU West
 	         ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
 	         connection = connectionFactory.createConnection("admin", "admin");
 	         Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
