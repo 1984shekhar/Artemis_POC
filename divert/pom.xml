@@ -21,7 +21,7 @@ under the License.
    <modelVersion>4.0.0</modelVersion>
 
       <groupId>org.apache.activemq.examples.broker</groupId>
-      <version>2.13.0.redhat-00006</version>
+      <version>2.24.0</version>
    <artifactId>divert</artifactId>
    <packaging>jar</packaging>
    <name>ActiveMQ Artemis JMS Divert Example</name>
