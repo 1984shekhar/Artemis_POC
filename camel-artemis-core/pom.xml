@@ -15,7 +15,7 @@
 		<spring.boot.version>2.3.0.RELEASE</spring.boot.version>
 		<camel.version>2.25.1</camel.version>
 		<hawtio.version>2.4.0</hawtio.version>
-		<artemis.version>2.13.0.redhat-00006</artemis.version>
+		<artemis.version>2.19.1</artemis.version>
 		<maven.compiler.source>8</maven.compiler.source>
 		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
